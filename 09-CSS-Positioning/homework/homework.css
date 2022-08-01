@@ -58,5 +58,6 @@ archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
 
 #EjercicioSiete{
     display: flex;
-    flex-direction: unset;
+    flex-direction: column;
+    
 }
