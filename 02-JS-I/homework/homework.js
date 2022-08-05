@@ -77,7 +77,7 @@ function tienenMismaLongitud(str1, str2) {
   // De lo contrario, devuelve "false"
   // Tu código:
   
-  if(str1 === str2){
+  if(str1.length === str2.length){
     return true;
   }else{
     return false;
@@ -90,6 +90,12 @@ function menosQueNoventa(num) {
   // De lo contrario, devuelve "false"
   // Tu código:
   
+  if(num < 90){
+    return true;
+  }else{
+
+   return false;
+  }
 }
 
 function mayorQueCincuenta(num) {
@@ -97,18 +103,32 @@ function mayorQueCincuenta(num) {
   // De lo contrario, devuelve "false"
   // Tu código:
   
+  if(num > 50){
+    return true;
+  }else{
+    return false;
+  }
+
 }
 
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
   
+var resto = x % y;
+return resto;
+
 }
 
 function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
+  if (num % 2 === 0){
+    return true;
+  }else{
+    return false;
+  }
   
 }
 
@@ -116,44 +136,62 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  if (num % 2 === 0){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  
+  var cuadrada = num * num;
+  return cuadrada;
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
   
+var potencia = num * num * num;
+return potencia;
+
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
   
+var potencia = math.pow(num , exponent);
+return exponent;
+
 }
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  
+  var redondeado = math.round(num);
+  return redondeado;
+
+
 }
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  
+  var redondeado = math.ciel(num);
+  return redondeado
 }
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
   
+var random = math.random ();
+return random;
+
 }
 
 function esPositivo(numero) {
