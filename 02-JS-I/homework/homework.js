@@ -56,14 +56,19 @@ function multiplica(x, y) {
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
-  var resultado = x / y;
-  return resultado
+  var division = x / y;
+  return division;
 }
 
 function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
+  if(x === y){
+    return true;
+  }else{
+    return false;
+  }
   
 }
 
@@ -72,6 +77,12 @@ function tienenMismaLongitud(str1, str2) {
   // De lo contrario, devuelve "false"
   // Tu código:
   
+  if(str1 === str2){
+    return true;
+  }else{
+    return false;
+  }
+
 }
 
 function menosQueNoventa(num) {
