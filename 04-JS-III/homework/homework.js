@@ -88,7 +88,7 @@ function agregarNumeros(numeros) {
   // Suma todos los enteros y devuelve el valor
   // Tu código:
   var total = 0; 
-  for(var i = 0; i < numero.length; i++){
+  for(var i = 0; i < numeros.length; i++){
     total = total + numeros [i];
   }
   return total;
@@ -116,9 +116,9 @@ function numeroMasGrande(numeros) {
   // Devuelve el número más grande
   // Tu código:
 
-  var max = numeros [0];
+  var max = numeros [0] ;
   for (var i = 1; i < numeros.length; i++){
-    if (numero > max [i]){
+    if (numeros[i] > max){
       max = numeros[i];
     }
   }
@@ -131,14 +131,12 @@ function multiplicarArgumentos() {
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
 
-  if (arguments.length == 0){
+  arguments => [] = 0
+
+
+  if(arguments.length == 0){
     return 0;
   }
-
-  if (arguments.longth = [1]){
-    return arguments
-  }
-
   var total = arguments[0];
 
   for (var i = 1; i < arguments.length; i++){
@@ -277,18 +275,18 @@ function breakStatement(numero) {
   // Tu código:
 
   var nuevaarray = []
-  var suma = nuevo 
+  var suma = numero
   for (let i = 0; i < 10; i++) {
 
     suma = suma + 2;
-    if (suma === i) breack
+    if (suma === i) break
     else{
-      nuevoarray.push(suma)
+      nuevaarray.push(suma)
     }
 
   }
 
-if (i<10) {
+if  (i<10) {
   return "se interrumpio la ejecucion"
 
 }else{
