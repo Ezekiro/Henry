@@ -5,24 +5,27 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
-  if(x < y) {
+  if (x > y ){
+    return x; 
+    
+  } else if (y > x){
     return y;
   }else{
-
-    return x;
-  
-} 
+    return x || y;
+  }
 
 }
 function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
-if(edad >= 18){
-  return "allowed";
-}else{
-  return "not allowed";
-}
+
+  if ( edad >= 18){
+    return "Allowed";
+  }if (edad < 18){
+    return "Not allowed"
+  }
+
 
 }
   
@@ -32,13 +35,15 @@ function conection(status) {
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
-if( status == 1){
-  return "online";
-}else if(status == 2){ 
 
-}else{
-    return "ofline";
+  if (status === 1){
+    return "Online";
+  }else if (status === 2){
+    return "Away";
+  }else{
+    return "Offline";
   }
+
 }
 
 
@@ -49,16 +54,16 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
+if (idioma === "aleman"){
+  return "Guten Tag!";
+}else if (idioma === "mandarin"){
+  return "Ni Hao!";
+}else if (idioma === "ingles"){
+    return "Hello!";
+  } else {
+    return "Hola!";
+  }
 
-if(idioma == "aleman"){
-  return "gutentag";
-}else if(idioma =="mandarin"){
-  return "ni hao";
-}else if (idioma == "ingles"){
-  return "hello";
-}else{
-  return "hola";
-}
 
 }
 
@@ -70,21 +75,23 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
-switch(key) {
-  case "blue":
-    return "this is blue";
-    case "red":
-    return "this red";
-    case "green":
-    return "this is green"
-    case "orange":
-    return "this is orange"
-    default:
-    return "color not found"
+
+    switch (color){
+      case "blue":
+      return "This is blue";
+      case "red":
+        return "This is red";
+        case "orange":
+          return "This is orange";
+          case "green":
+            return "This is green";
+          default:
+            return "Color not found";
+    }
+
 }
 
 
-}
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
@@ -92,8 +99,9 @@ function esDiezOCinco(numero) {
   // Tu código:
 if (numero == 10 || numero === 5) {
   return true;
+}else {
+  return false ;
 }
-  return false 
 }
 
 function estaEnRango(numero) {
@@ -175,11 +183,11 @@ function operadoresLogicos(num1, num2, num3) {
 //  return false;
 //}
 if(num1 < 0 || num2 < 0 || num3 < 0){
-  return "hay negativos";
+  return "Hay negativos";
 }else if (num1 === 0 || num2 === 0 || num3 === 0){
   return "Error"
 }else if(num1 > num2 && num1 > num3 && num1 > 0){
-  return "numero 1 es mayor y positivo";
+  return "Número 1 es mayor y positivo";
 }else if(num3 > num1 && num3 > num2 ){
   var resultado = num3 + 1;
   return resultado;
@@ -216,9 +224,9 @@ function esVerdadero(valor){
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
 if (valor === true){
-  return "soy verdadero";
+  return "Soy verdadero";
  }
-  return "soy falso";
+  return "Soy falso";
 
 }
 
@@ -239,28 +247,24 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  
-  var sring = numero.tostring();
-  var digitos = string.length;
-  if (digitos == 3){
+  var numeroString = [];
+  if ((numero.toString()).length === 3){
     return true;
-  } else{
-    return false;
   }
-
+  return false
 }
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-  var acc = numero;
-  var aux = 1  
+  var contador = 8;
+  var resultado = 0;
   do{
-    acc = acc + 5;
-
-    aux = aux + 1;
-  }while(aux < 9)
+    resultado += 5;
+    contador -= 1;
+  }while ( contador!== 0)
+  return numero + resultado;
 }
 
 
