@@ -131,21 +131,11 @@ function multiplicarArgumentos() {
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
 
-  arguments => [] = 0
-
-
-  if(arguments.length == 0){
+  if(arguments.length === 0){
     return 0;
+  } else if (arguments.length === 1){
+    return arguments[0]
   }
-  var total = arguments[0];
-
-  for (var i = 1; i < arguments.length; i++){
-
-    total = total * arguments[i];
-
-  }
-
-return total;
 }
 
 
